@@ -53,5 +53,132 @@ def fourth():
     for price in prices:
         total = total + price
     print(f"Total: {total}")
-fourth()
+
+def fifth():
+    for x in range(4):
+        for y in range(3):
+            print(f'({x}, {y})')
+    numbers = [5, 2, 5, 2, 2]
+    for x_count in numbers:
+        print("x" * x_count)
+
+    numbers = [6, 3, 6, 6, 1]
+    for x_count in numbers:
+        output = ""
+        for count in range(x_count):
+            output += "x"
+        print(output)
+def six():
+    numbers = [3, 6, 2, 8, 4, 10]
+    max = numbers[0]
+    for number in numbers:
+        if number > max:
+            max = number
+    print(max)
+
+def seven():
+    matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+            ]
+    matrix[1][1] = 10
+    print(matrix[1][1])
+    for row in matrix:
+        for item in row:
+            print(item)
+def eight():
+    numbers = [5, 2, 1, 7, 4]
+    numbers.append(20)
+    numbers.insert(0, 15)
+    numbers.remove(2)
+    print(numbers.index(7))
+    numbers.sort()
+    numbers.reverse()
+    numbers2 = numbers.copy
+    numbers.append(15)
+    print(numbers2)
+    print(numbers)
+def nine():
+    numbers = [2, 2, 4, 6, 3, 4, 6, 1]
+    uniques = []
+    for number in numbers:
+        if number not in uniques:
+            uniques.append(number)
+    print(uniques)
+
+def ten():
+    numbers = (1, 2, 3)
+    print( numbers[0])
+
+def eleven():
+    coordinates = (1, 2, 3)
+    x = coordinates[0]
+    y = coordinates[1]
+    z = coordinates[2]
+    x, y, z = coordinates
+    print(x)
+
+def twelve():
+    customer = {
+            "name": "John Smith",
+            "age": 30,
+            "is_verified": True
+
+            }
+    customer["name"] = "Rose"
+    customer["birthdate"] = " Jan 1 1980"
+    print(customer["birthdate"])
+    
+def thirteen():
+    phone = input("Phone: ")
+    digits_mapping = {
+            "1": "one",
+            "2": "two",
+            "3": "three",
+            "4": "four",
+            "5": "five",
+            "6":"six",
+            "7":"seven",
+            "8":"eight",
+            "9":"nine"
+        }
+    output = ""
+    for ch in phone:
+        output += digits_mapping.get(ch, "!") + " "
+    print(output)
+
+def fourteen():
+    message = input(">")
+    words = message.split(' ')
+    emojis = {
+            ":)": " ",
+            ":(": " "
+            }
+    output = ""
+    for word in words:
+        output += emojis(words).get(word, word) + " "
+    print(output)
+
+def greet_user(first_name, last_name):
+    print(f"Hi {first_name} {last_name}")
+    print("Welcome")
+
+
+print("Start")
+greet_user("John", last_name="Smith")
+print("Finish")
+
+def square(number):
+    return number * number
+
+
+print(square(3))
+
+
+
+
+
+
+
 
