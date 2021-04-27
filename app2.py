@@ -175,10 +175,114 @@ def square(number):
 
 print(square(3))
 
+def fifteen():
+    try:
+        age = int(input("Age: "))
+        income = 2000
+        risk = income / age
+        print(age)
+    except ZeroDivisionError:
+        print("Age cannot be 0.")
+    except ValueError:
+        print("Invalid value")
+
+def sixteen():
+    #this is an example
+    print("Sky is blue")
+
+def seventeen():
+    class Point:
+        def move(self):
+            print("move")
+        def draw(self):
+            print("draw")
+    point1 = Point()
+    point1.x = 10
+    point1.y = 20
+    print(point1.x)
+    point1.draw()
+
+    point2 = Point()
+    point2.x = 1
+    print(point2.x)
+
+def eighteen():
+    class Point:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
+    point = Point(10, 20)
+    point.x = 15
+    print(point.x)
+
+def nineteen():
+    class Person:
+        def __init__(self, name):
+            self.name = name
+        def talk(self):
+            print(f"Hi, I am {self.name}")
+    john = Person("John Smith")
+    john.talk()
+    bob = Person("Bob Smith")
+    bob.talk()
+
+def twenty():
+    class Mammal:
+        def walk(self):
+            print("walk")
+
+    class Dog(Mammal):
+        pass
+
+
+    class Cat(Mammal):
+        pass
+
+    dog1 = Dog()
+    dog1.walk()
 
 
 
+def lbs_tokg(weight):
+    return weight * 0.45
+
+def kg_to_lbs(weight):
+    return weight / 0.45
+
+from utils import find_max
+
+numbers = [10, 3, 6, 2]
+max = find_max(numbers)
+
+print(max)
+
+from ecommerce.shipping import calc_shipping
 
 
+calc_shipping()
+
+import random
+
+for i in range(3):
+    print(random.randint(10, 20))
+
+def twentyone():
+    import random
+
+    class Dice:
+        def roll(self):
+           first = random.randint(1, 6)
+           second = random.randint(1, 6)
+           return first, second
+
+    dice = Dice()
+    print(dice.roll())
+
+def twentytwo():
+    from pathlib import Path
+
+    path = Path()
+    for file in path.glob("*"):
+        print(file)
 
 
